@@ -1,113 +1,188 @@
-// Responsive Navigation Toggle
-const hamburger = document.querySelector(".hamburger");
-const navMenu = document.querySelector("nav ul");
+// ==============================
+// RESPONSIVE NAVIGATION
+// ==============================
 
-hamburger.addEventListener("click", () => {
-  const isOpen = navMenu.classList.toggle("show");
+const menuButton = document.querySelector("#menuButton");
+const navMenu = document.querySelector("#navMenu");
 
-  hamburger.setAttribute("aria-expanded", isOpen);
+menuButton.addEventListener("click", () => {
+    navMenu.classList.toggle("show");
+
+    const isOpen = navMenu.classList.contains("show");
+
+    menuButton.setAttribute("aria-expanded", isOpen);
 });
 
 
-// Dynamic Year
-document.getElementById("year").textContent = new Date().getFullYear();
+// ==============================
+// FOOTER DATE INFORMATION
+// ==============================
+
+document.querySelector("#year").textContent = new Date().getFullYear();
+
+document.querySelector("#lastModified").textContent =
+    `Last Modified: ${document.lastModified}`;
 
 
-// Last Modified Date
-document.getElementById("lastModified").textContent = document.lastModified;
+// ==============================
+// COURSE ARRAY
+// ==============================
 
-
-// Course List Array
 const courses = [
-  {
-    code: "WDD130",
-    name: "Web Fundamentals",
-    credits: 3,
-    completed: true
-  },
-  {
-    code: "WDD131",
-    name: "Responsive Web Design",
-    credits: 3,
-    completed: false
-  },
-  {
-    code: "CSE110",
-    name: "Programming Basics",
-    credits: 3,
-    completed: true
-  },
-  {
-    code: "CSE210",
-    name: "Programming with Classes",
-    credits: 3,
-    completed: false
-  }
+    {
+        subject: 'CSE',
+        number: 110,
+        title: 'Introduction to Programming',
+        credits: 2,
+        certificate: 'Web and Computer Programming',
+        description: 'This course will introduce students to programming. It will introduce the building blocks of programming languages (variables, decisions, calculations, loops, array, and input/output) and use them to solve problems.',
+        technology: [
+            'Python'
+        ],
+        completed: true
+    },
+    {
+        subject: 'WDD',
+        number: 130,
+        title: 'Web Fundamentals',
+        credits: 2,
+        certificate: 'Web and Computer Programming',
+        description: 'This course introduces students to the World Wide Web and to careers in web site design and development. The course is hands on with students actually participating in simple web designs and programming.',
+        technology: [
+            'HTML',
+            'CSS'
+        ],
+        completed: true
+    },
+    {
+        subject: 'CSE',
+        number: 111,
+        title: 'Programming with Functions',
+        credits: 2,
+        certificate: 'Web and Computer Programming',
+        description: 'CSE 111 students become more organized, efficient, and powerful computer programmers by learning to research and call functions written by others; to write, call, debug, and test their own functions.',
+        technology: [
+            'Python'
+        ],
+        completed: true
+    },
+    {
+        subject: 'CSE',
+        number: 210,
+        title: 'Programming with Classes',
+        credits: 2,
+        certificate: 'Web and Computer Programming',
+        description: 'This course will introduce the notion of classes and objects. It will present encapsulation at a conceptual level. It will also work with inheritance and polymorphism.',
+        technology: [
+            'C#'
+        ],
+        completed: true
+    },
+    {
+        subject: 'WDD',
+        number: 131,
+        title: 'Dynamic Web Fundamentals',
+        credits: 2,
+        certificate: 'Web and Computer Programming',
+        description: 'This course builds on prior experience in Web Fundamentals and programming. Students will learn to create dynamic websites that use JavaScript to respond to events, update content, and create responsive user experiences.',
+        technology: [
+            'HTML',
+            'CSS',
+            'JavaScript'
+        ],
+        completed: true
+    },
+    {
+        subject: 'WDD',
+        number: 231,
+        title: 'Frontend Web Development I',
+        credits: 2,
+        certificate: 'Web and Computer Programming',
+        description: 'This course builds on prior experience with Dynamic Web Fundamentals and programming. Students will focus on user experience, accessibility, compliance, performance optimization, and basic API usage.',
+        technology: [
+            'HTML',
+            'CSS',
+            'JavaScript'
+        ],
+        completed: false
+    }
 ];
 
 
-// Display Courses
+// ==============================
+// DISPLAY COURSES
+// ==============================
+
 function displayCourses(filter = "all") {
-  const container = document.getElementById("courses");
 
-  container.innerHTML = "";
+    const courseContainer = document.querySelector("#courses");
 
-  let filteredCourses = courses;
+    courseContainer.innerHTML = "";
 
-  if (filter === "wdd") {
-    filteredCourses = courses.filter(course =>
-      course.code.startsWith("WDD")
-    );
-  }
+    let filteredCourses = courses;
 
-  if (filter === "cse") {
-    filteredCourses = courses.filter(course =>
-      course.code.startsWith("CSE")
-    );
-  }
-
-  filteredCourses.forEach(course => {
-    const card = document.createElement("div");
-
-    card.className = "course-card";
-
-    if (course.completed) {
-      card.classList.add("completed");
+    if (filter === "cse") {
+        filteredCourses = courses.filter(course =>
+            course.subject === "CSE"
+        );
     }
 
-    card.innerHTML = `
-            <h3>${course.code} - ${course.name}</h3>
-            <p>Credits: ${course.credits}</p>
-            <p>${course.completed ? "Completed" : "Not Completed"}</p>
+    if (filter === "wdd") {
+        filteredCourses = courses.filter(course =>
+            course.subject === "WDD"
+        );
+    }
+
+
+    filteredCourses.forEach(course => {
+
+        const card = document.createElement("div");
+
+        card.classList.add("course-card");
+
+        if (course.completed) {
+            card.classList.add("completed");
+        }
+
+        card.innerHTML = `
+            <h3>${course.subject} ${course.number}</h3>
+            <p>${course.title}</p>
+            <p>${course.credits} credits</p>
         `;
 
-    container.appendChild(card);
-  });
+        courseContainer.appendChild(card);
+    });
 
 
-  // Calculate Total Credits using reduce()
-  const totalCredits = filteredCourses.reduce(
-    (total, course) => total + course.credits,
-    0
-  );
+    // Calculate total credits using reduce()
+    const totalCredits = filteredCourses.reduce(
+        (total, course) => total + course.credits,
+        0
+    );
 
-  document.getElementById("totalCredits").textContent = totalCredits;
+    document.querySelector("#totalCredits").textContent = totalCredits;
 }
 
 
-// Course Filter Buttons
-document.getElementById("allBtn").addEventListener("click", () => {
-  displayCourses("all");
+// ==============================
+// COURSE FILTER BUTTONS
+// ==============================
+
+document.querySelector("#allBtn").addEventListener("click", () => {
+    displayCourses("all");
 });
 
-document.getElementById("wddBtn").addEventListener("click", () => {
-  displayCourses("wdd");
+document.querySelector("#cseBtn").addEventListener("click", () => {
+    displayCourses("cse");
 });
 
-document.getElementById("cseBtn").addEventListener("click", () => {
-  displayCourses("cse");
+document.querySelector("#wddBtn").addEventListener("click", () => {
+    displayCourses("wdd");
 });
 
 
-// Initial Course Display
+// ==============================
+// INITIAL DISPLAY
+// ==============================
+
 displayCourses();

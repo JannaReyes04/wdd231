@@ -6,84 +6,111 @@
     <meta name="description" content="Janna Reyes WDD231 course home page">
     <meta name="author" content="Janna Reyes">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Janna Reyes | WDD231</title>
-    <link rel="stylesheet" href="styles/style.css">
+
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+
+    <script src="scripts/main.js" defer></script>
 </head>
 
 <body>
 
     <header>
-        <div class="logo">
-            <img src="logo.svg" alt="Janna Reyes site logo" width="40" height="40">
+        <div class="site-name">
+            <img src="images/logo.svg" alt="Janna Reyes logo" width="40" height="40">
             <span>Janna Reyes</span>
         </div>
 
-        <button class="hamburger" aria-label="Open navigation menu" aria-expanded="false">
+        <button id="menuButton" class="hamburger" aria-label="Open navigation menu" aria-expanded="false">
             ☰
         </button>
     </header>
 
     <nav>
-        <ul>
-            <li><a href="index.html" class="active">Home</a></li>
-            <li><a href="chamber/index.html">Chamber</a></li>
-            <li><a href="final/index.html">Final</a></li>
+        <ul id="navMenu">
+            <li>
+                <a href="index.html" class="active">Home</a>
+            </li>
+            <li>
+                <a href="chamber.html">Chamber</a>
+            </li>
+            <li>
+                <a href="final.html">Final</a>
+            </li>
         </ul>
     </nav>
 
     <main>
+
         <h1>Home</h1>
 
-        <section>
-            <h2>About Me</h2>
-            <p>
-                Hello! My name is Janna Reyes. I am studying web development
-                and building my skills in HTML, CSS, and JavaScript.
-            </p>
-        </section>
+        <div class="home-grid">
 
-        <section>
-            <h2>WDD231 Courses</h2>
+            <section class="about">
+                <h2>About Me</h2>
 
-            <div class="course-buttons">
-                <button id="allBtn">All</button>
-                <button id="wddBtn">WDD</button>
-                <button id="cseBtn">CSE</button>
-            </div>
+                <div class="about-content">
+                    <p>
+                        Hello! My name is Janna Reyes. I am studying web development
+                        and building my skills in HTML, CSS, and JavaScript. I enjoy
+                        learning how to create websites that are useful, accessible,
+                        and responsive.
+                    </p>
+                </div>
+            </section>
 
-            <p>
-                Total Credits:
-                <strong id="totalCredits">0</strong>
-            </p>
+            <section class="photo">
+                <h2>Student Photo</h2>
 
-            <div id="courses" class="courses"></div>
-        </section>
+                <img src="images/student-photo.jpg" alt="Photo of Janna Reyes" width="300" height="300">
+            </section>
+
+            <section class="certificate">
+                <h2>Web Certificate Courses</h2>
+
+                <div class="course-buttons">
+                    <button id="allBtn">All</button>
+                    <button id="cseBtn">CSE</button>
+                    <button id="wddBtn">WDD</button>
+                </div>
+
+                <p class="credits">
+                    The total credits for courses listed above is
+                    <strong id="totalCredits">0</strong>
+                </p>
+
+                <div id="courses" class="courses"></div>
+            </section>
+
+        </div>
+
     </main>
 
     <footer>
-        <div class="social">
-            <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
-                Facebook
-            </a>
+
+        <div class="social-links">
             <a href="https://github.com/" target="_blank" rel="noopener noreferrer">
                 GitHub
             </a>
+
             <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">
                 LinkedIn
+            </a>
+
+            <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
+                Facebook
             </a>
         </div>
 
         <p>
-            &copy; <span id="year"></span> Janna Reyes
+            &copy; <span id="year"></span> Janna Reyes, Philippines
         </p>
 
-        <p>
-            Last Modified:
-            <span id="lastModified"></span>
-        </p>
+        <p id="lastModified"></p>
+
     </footer>
-
-    <script src="scripts/main.js"></script>
 
 </body>
 
