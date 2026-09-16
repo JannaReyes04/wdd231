@@ -1,0 +1,58 @@
+@media screen and (min-width: 769px) {
+
+    /* ==============================
+       NAVIGATION
+       ============================== */
+
+    .hamburger {
+        display: none;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    nav li {
+        border: none;
+    }
+
+    nav a {
+        padding: 1rem 2rem;
+    }
+
+
+    /* ==============================
+       MAIN
+       ============================== */
+
+    main {
+        padding: 2rem;
+    }
+
+
+    /* ==============================
+       MEMBER GRID
+       ============================== */
+
+    .member-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+
+    /* ==============================
+       LIST VIEW
+       ============================== */
+
+    .member-list .member-card {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        text-align: left;
+    }
+
+    .member-list .member-card img {
+        display: block;
+        margin: auto;
+    }
+}

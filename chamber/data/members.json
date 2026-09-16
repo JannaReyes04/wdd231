@@ -1,0 +1,65 @@
+[
+    {
+        "name": "Meycauayan Business Center",
+        "address": "McArthur Highway, Meycauayan City, Bulacan",
+        "phone": "+63 912 111 1111",
+        "website": "https://example.com",
+        "image": "business1.jpg",
+        "membership": 3,
+        "description": "A local business center providing services and support to entrepreneurs."
+    },
+    {
+        "name": "Bulacan Food Hub",
+        "address": "Malhacan, Meycauayan City, Bulacan",
+        "phone": "+63 912 222 2222",
+        "website": "https://example.com",
+        "image": "business2.jpg",
+        "membership": 2,
+        "description": "A local food business offering Filipino meals and products."
+    },
+    {
+        "name": "Meycauayan Hardware Supply",
+        "address": "Calvario, Meycauayan City, Bulacan",
+        "phone": "+63 912 333 3333",
+        "website": "https://example.com",
+        "image": "business3.jpg",
+        "membership": 1,
+        "description": "A supplier of construction materials and hardware products."
+    },
+    {
+        "name": "North Bulacan Printing Services",
+        "address": "Banga, Meycauayan City, Bulacan",
+        "phone": "+63 912 444 4444",
+        "website": "https://example.com",
+        "image": "business4.jpg",
+        "membership": 2,
+        "description": "Printing and design services for businesses, schools, and organizations."
+    },
+    {
+        "name": "Meycauayan Computer Solutions",
+        "address": "Pandayan, Meycauayan City, Bulacan",
+        "phone": "+63 912 555 5555",
+        "website": "https://example.com",
+        "image": "business5.jpg",
+        "membership": 3,
+        "description": "Computer sales, repair, networking, and technology services."
+    },
+    {
+        "name": "Bulacan Transport Services",
+        "address": "Meycauayan City, Bulacan",
+        "phone": "+63 912 666 6666",
+        "website": "https://example.com",
+        "image": "business6.jpg",
+        "membership": 1,
+        "description": "Transportation and delivery services for local businesses."
+    },
+    {
+        "name": "Meycauayan Family Restaurant",
+        "address": "Perez, Meycauayan City, Bulacan",
+        "phone": "+63 912 777 7777",
+        "website": "https://example.com",
+        "image": "business7.jpg",
+        "membership": 2,
+        "description": "A family restaurant serving local Filipino dishes."
+    }
+]
