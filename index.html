@@ -3,58 +3,87 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="description" content="Home page for my web development project">
-    <meta name="'author" content="Janna REyes">
+    <meta name="description" content="Janna Reyes WDD231 course home page">
+    <meta name="author" content="Janna Reyes">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DocumentJanna</title>
+    <title>Janna Reyes | WDD231</title>
+    <link rel="stylesheet" href="styles/style.css">
 </head>
 
 <body>
 
-
     <header>
-        <div class="'logo">
-            <img scr="logo.svg" alt="site logo">
-            <span>Janna</span>
+        <div class="logo">
+            <img src="logo.svg" alt="Janna Reyes site logo" width="40" height="40">
+            <span>Janna Reyes</span>
         </div>
-        <button class="humberger"></button>
+
+        <button class="hamburger" aria-label="Open navigation menu" aria-expanded="false">
+            ☰
+        </button>
     </header>
 
     <nav>
         <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="Chamber"></a></li>
-            <li><a href="Final"></a></li>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="chamber/index.html">Chamber</a></li>
+            <li><a href="final/index.html">Final</a></li>
         </ul>
     </nav>
 
     <main>
         <h1>Home</h1>
+
         <section>
-            <h2>Section 1</h2>
-            <p>Content........</p>
+            <h2>About Me</h2>
+            <p>
+                Hello! My name is Janna Reyes. I am studying web development
+                and building my skills in HTML, CSS, and JavaScript.
+            </p>
         </section>
+
         <section>
-            <h2>Section 3</h2>
-            <p>conten.......</p>
+            <h2>WDD231 Courses</h2>
+
+            <div class="course-buttons">
+                <button id="allBtn">All</button>
+                <button id="wddBtn">WDD</button>
+                <button id="cseBtn">CSE</button>
+            </div>
+
+            <p>
+                Total Credits:
+                <strong id="totalCredits">0</strong>
+            </p>
+
+            <div id="courses" class="courses"></div>
         </section>
     </main>
 
-<!-- FOOTER -->
     <footer>
         <div class="social">
-            <a href="facebook"></a>
-            <a href="github"></a>
-            <a href="linkend"></a>
+            <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
+                Facebook
+            </a>
+            <a href="https://github.com/" target="_blank" rel="noopener noreferrer">
+                GitHub
+            </a>
+            <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">
+                LinkedIn
+            </a>
         </div>
-        <dive class="copyright"></dive>
+
+        <p>
+            &copy; <span id="year"></span> Janna Reyes
+        </p>
+
+        <p>
+            Last Modified:
+            <span id="lastModified"></span>
+        </p>
     </footer>
 
-<!-- JAVASCRIPT -->
-  <script>
-    // Dynamically set current year
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
+    <script src="scripts/main.js"></script>
 
 </body>
 
