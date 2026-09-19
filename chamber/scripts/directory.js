@@ -1,33 +1,45 @@
-// ==============================
+// ======================================
 // RESPONSIVE NAVIGATION
-// ==============================
+// ======================================
 
 const menuButton = document.querySelector("#menuButton");
 const navMenu = document.querySelector("#navMenu");
 
 menuButton.addEventListener("click", () => {
+
     navMenu.classList.toggle("show");
 
     const isOpen = navMenu.classList.contains("show");
 
     menuButton.setAttribute("aria-expanded", isOpen);
+
+    menuButton.setAttribute(
+        "aria-label",
+        isOpen
+            ? "Close navigation menu"
+            : "Open navigation menu"
+    );
+
+    menuButton.textContent = isOpen ? "✕" : "☰";
 });
 
 
-// ==============================
+// ======================================
 // FOOTER INFORMATION
-// ==============================
+// ======================================
 
-document.querySelector("#currentYear").textContent =
-    new Date().getFullYear();
+const currentYear = document.querySelector("#currentYear");
+const lastModified = document.querySelector("#lastModified");
 
-document.querySelector("#lastModified").textContent =
-    `Last Modified: ${document.lastModified}`;
+currentYear.textContent = new Date().getFullYear();
+
+lastModified.textContent =
+    `Last Modification: ${document.lastModified}`;
 
 
-// ==============================
-// GET MEMBERS FROM JSON
-// ==============================
+// ======================================
+// GET MEMBER DATA
+// ======================================
 
 async function getMembers() {
 
@@ -36,7 +48,9 @@ async function getMembers() {
         const response = await fetch("data/members.json");
 
         if (!response.ok) {
-            throw new Error("Could not load member data.");
+            throw new Error(
+                `Unable to load member data: ${response.status}`
+            );
         }
 
         const members = await response.json();
@@ -47,13 +61,21 @@ async function getMembers() {
 
         console.error("Error loading members:", error);
 
+        const container = document.querySelector("#members");
+
+        container.innerHTML = `
+            <p class="error-message">
+                Sorry, the business directory could not be loaded.
+                Please try again later.
+            </p>
+        `;
     }
 }
 
 
-// ==============================
+// ======================================
 // DISPLAY MEMBERS
-// ==============================
+// ======================================
 
 function displayMembers(members) {
 
@@ -61,7 +83,7 @@ function displayMembers(members) {
 
     container.innerHTML = "";
 
-    members.forEach(member => {
+    members.forEach((member) => {
 
         const card = document.createElement("article");
 
@@ -70,7 +92,7 @@ function displayMembers(members) {
         card.innerHTML = `
             <img
                 src="images/${member.image}"
-                alt="${member.name} logo"
+                alt="${member.name} business logo"
                 loading="lazy"
                 width="200"
                 height="150"
@@ -78,9 +100,11 @@ function displayMembers(members) {
 
             <div class="member-info">
 
-                <h3>${member.name}</h3>
+                <h2>${member.name}</h2>
 
-                <p>${member.description}</p>
+                <p class="description">
+                    ${member.description}
+                </p>
 
                 <p>
                     <strong>Address:</strong>
@@ -94,10 +118,13 @@ function displayMembers(members) {
 
                 <p>
                     <strong>Membership:</strong>
-                    ${getMembershipLevel(member.membership)}
+                    <span class="membership-level">
+                        ${getMembershipLevel(member.membership)}
+                    </span>
                 </p>
 
                 <a
+                    class="website-link"
                     href="${member.website}"
                     target="_blank"
                     rel="noopener noreferrer">
@@ -112,54 +139,67 @@ function displayMembers(members) {
 }
 
 
-// ==============================
+// ======================================
 // MEMBERSHIP LEVEL
-// ==============================
+// ======================================
 
 function getMembershipLevel(level) {
 
-    if (level === 3) {
-        return "Gold";
-    }
+    switch (level) {
 
-    if (level === 2) {
-        return "Silver";
-    }
+        case 3:
+            return "Gold";
 
-    return "Member";
+        case 2:
+            return "Silver";
+
+        default:
+            return "Member";
+    }
 }
 
 
-// ==============================
+// ======================================
 // GRID / LIST VIEW
-// ==============================
+// ======================================
 
 const gridButton = document.querySelector("#gridButton");
 const listButton = document.querySelector("#listButton");
-const members = document.querySelector("#members");
+const membersContainer = document.querySelector("#members");
+
+
+// GRID VIEW
 
 gridButton.addEventListener("click", () => {
 
-    members.classList.add("member-grid");
-    members.classList.remove("member-list");
+    membersContainer.classList.add("member-grid");
+    membersContainer.classList.remove("member-list");
 
     gridButton.classList.add("active-view");
     listButton.classList.remove("active-view");
+
+    gridButton.setAttribute("aria-pressed", "true");
+    listButton.setAttribute("aria-pressed", "false");
 });
 
+
+// LIST VIEW
 
 listButton.addEventListener("click", () => {
 
-    members.classList.add("member-list");
-    members.classList.remove("member-grid");
+    membersContainer.classList.add("member-list");
+    membersContainer.classList.remove("member-grid");
 
     listButton.classList.add("active-view");
     gridButton.classList.remove("active-view");
+
+    gridButton.setAttribute("aria-pressed", "false");
+    listButton.setAttribute("aria-pressed", "true");
 });
 
 
-// ==============================
-// INITIALIZE
-// ==============================
+// ======================================
+// INITIALIZE DIRECTORY
+// ======================================
 
 getMembers();

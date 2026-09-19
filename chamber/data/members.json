@@ -1,65 +1,65 @@
 [
     {
-        "name": "Meycauayan Business Center",
-        "address": "McArthur Highway, Meycauayan City, Bulacan",
+        "name": "TaskUs Meycauayan",
+        "address": "Toll Gate, Malhacan, Meycauayan City, Bulacan",
         "phone": "+63 912 111 1111",
-        "website": "https://example.com",
-        "image": "business1.jpg",
+        "website": "https://www.taskus.com/locations/philippines/",
+        "image": "taskus.jpg",
         "membership": 3,
-        "description": "A local business center providing services and support to entrepreneurs."
+        "description": "A business process outsourcing company providing employment opportunities and professional services in Meycauayan City."
     },
     {
-        "name": "Bulacan Food Hub",
+        "name": "Savemore Market",
         "address": "Malhacan, Meycauayan City, Bulacan",
         "phone": "+63 912 222 2222",
-        "website": "https://example.com",
-        "image": "business2.jpg",
+        "website": "https://www.smmarkets.ph/",
+        "image": "savemore.jpg",
         "membership": 2,
-        "description": "A local food business offering Filipino meals and products."
+        "description": "A neighborhood supermarket providing groceries, household essentials, and convenient shopping for local residents."
     },
     {
-        "name": "Meycauayan Hardware Supply",
-        "address": "Calvario, Meycauayan City, Bulacan",
+        "name": "Mercury Drug",
+        "address": "McArthur Highway, Meycauayan City, Bulacan",
         "phone": "+63 912 333 3333",
-        "website": "https://example.com",
-        "image": "business3.jpg",
+        "website": "https://www.mercurydrug.com/",
+        "image": "mercury.jpg",
         "membership": 1,
-        "description": "A supplier of construction materials and hardware products."
+        "description": "A pharmacy providing medicines, healthcare products, personal care items, and other everyday essentials."
     },
     {
-        "name": "North Bulacan Printing Services",
-        "address": "Banga, Meycauayan City, Bulacan",
+        "name": "Cocopan",
+        "address": "Calvario, Meycauayan City, Bulacan",
         "phone": "+63 912 444 4444",
-        "website": "https://example.com",
-        "image": "business4.jpg",
+        "website": "https://example.com/",
+        "image": "cocopan.jpg",
         "membership": 2,
-        "description": "Printing and design services for businesses, schools, and organizations."
+        "description": "A local business serving customers in Meycauayan City and surrounding communities."
     },
     {
-        "name": "Meycauayan Computer Solutions",
-        "address": "Pandayan, Meycauayan City, Bulacan",
+        "name": "Puregold",
+        "address": "Banga, Meycauayan City, Bulacan",
         "phone": "+63 912 555 5555",
-        "website": "https://example.com",
-        "image": "business5.jpg",
+        "website": "https://www.puregold.com.ph/",
+        "image": "puregold.jpg",
         "membership": 3,
-        "description": "Computer sales, repair, networking, and technology services."
+        "description": "A supermarket and retail store providing groceries, household products, and other everyday necessities."
     },
     {
-        "name": "Bulacan Transport Services",
+        "name": "KFC",
         "address": "Meycauayan City, Bulacan",
         "phone": "+63 912 666 6666",
-        "website": "https://example.com",
-        "image": "business6.jpg",
+        "website": "https://www.kfc.com.ph/",
+        "image": "kfc.jpg",
         "membership": 1,
-        "description": "Transportation and delivery services for local businesses."
+        "description": "A quick-service restaurant offering fried chicken, meals, snacks, and other food choices for individuals and families."
     },
     {
-        "name": "Meycauayan Family Restaurant",
-        "address": "Perez, Meycauayan City, Bulacan",
+        "name": "McDonald's",
+        "address": "Pandayan, Meycauayan City, Bulacan",
         "phone": "+63 912 777 7777",
-        "website": "https://example.com",
-        "image": "business7.jpg",
+        "website": "https://www.mcdonalds.com.ph/",
+        "image": "mcdo.jpg",
         "membership": 2,
-        "description": "A family restaurant serving local Filipino dishes."
+        "description": "A quick-service restaurant serving burgers, chicken, breakfast meals, desserts, and other popular food choices."
     }
 ]

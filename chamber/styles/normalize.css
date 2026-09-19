@@ -1,6 +1,10 @@
-/* Simple CSS Reset */
+/* ======================================
+   BASIC CSS NORMALIZATION
+   ====================================== */
 
-* {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -22,4 +26,8 @@ input,
 textarea,
 select {
   font: inherit;
+}
+
+button {
+  cursor: pointer;
 }
