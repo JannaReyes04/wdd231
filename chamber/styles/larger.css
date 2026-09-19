@@ -129,4 +129,48 @@
         text-align: right;
     }
 
+    /* ======================================
+       HOME PAGE - LARGE VIEW
+       ====================================== */
+
+    .hero img {
+        height: 450px;
+    }
+
+
+    .hero-content {
+        right: 2rem;
+        bottom: 2rem;
+        left: auto;
+
+        width: 480px;
+
+        padding: 1.5rem;
+    }
+
+
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+
+    /* ======================================
+       HOME INFORMATION
+       ====================================== */
+
+    .home-content {
+        grid-template-columns:
+            2fr 1fr 1fr;
+    }
+
+
+    /* ======================================
+       SPOTLIGHTS
+       ====================================== */
+
+    .spotlight-container {
+        grid-template-columns:
+            repeat(3, minmax(0, 1fr));
+    }
+
 }
