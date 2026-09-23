@@ -173,4 +173,25 @@
             repeat(3, minmax(0, 1fr));
     }
 
+
+
+    /* ======================================
+   JOIN PAGE - LARGE VIEW
+   ====================================== */
+
+    .join-layout {
+        display: grid;
+        grid-template-columns: minmax(0, 2fr) minmax(300px, 1fr);
+        gap: 2rem;
+        align-items: start;
+    }
+
+    .membership-section {
+        margin-top: 0;
+    }
+
+    .membership-card {
+        width: 100%;
+    }
+
 }

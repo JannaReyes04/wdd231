@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="Join the Meycauayan Chamber of Commerce and connect your business with opportunities, resources, and the local business community.">
+
+    <meta name="author" content="Janna Reyes">
+
+    <title>Meycauayan Chamber of Commerce | Join</title>
+
+    <link rel="icon" href="images/chamber-logo.svg" type="image/svg+xml">
+
+    <meta property="og:title" content="Join | Meycauayan Chamber of Commerce">
+    <meta property="og:description" content="Apply for membership in the Meycauayan Chamber of Commerce.">
+    <meta property="og:image" content="https://jannareyes04.github.io/wdd231/chamber/images/chamber-logo.svg">
+    <meta property="og:url" content="https://jannareyes04.github.io/wdd231/chamber/join.html">
+    <meta property="og:type" content="website">
+
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+
+    <script src="scripts/join.js" defer></script>
+</head>
+
+<body>
+
+    <header>
+        <div class="brand">
+            <img src="images/chamber-logo.svg" alt="Meycauayan Chamber of Commerce logo" width="60" height="60">
+
+            <div class="brand-name">
+                <span>Meycauayan</span>
+                <p>Chamber of Commerce</p>
+            </div>
+        </div>
+
+        <button id="menuButton" class="hamburger" type="button" aria-label="Open navigation menu" aria-expanded="false"
+            aria-controls="navMenu">
+            ☰
+        </button>
+    </header>
+
+    <nav>
+        <ul id="navMenu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="directory.html">Directory</a></li>
+            <li><a href="join.html" class="active">Join</a></li>
+            <li><a href="discover.html">Discover</a></li>
+        </ul>
+    </nav>
+
+    <main>
+
+        <h1>Join the Chamber</h1>
+
+        <p class="join-intro">
+            Become part of the Meycauayan business community.
+            Complete the application below and select the membership
+            level that best fits your organization.
+        </p>
+
+        <div class="join-layout">
+
+            <!-- APPLICATION FORM -->
+
+            <section class="application-section">
+
+                <h2>Membership Application</h2>
+
+                <form method="get" action="thankyou.html" class="join-form">
+
+                    <label>
+                        First Name *
+                        <input type="text" name="first" title="Enter your first name" autocomplete="given-name"
+                            required>
+                    </label>
+
+                    <label>
+                        Last Name *
+                        <input type="text" name="last" title="Enter your last name" autocomplete="family-name" required>
+                    </label>
+
+                    <label>
+                        Organizational Title
+                        <input type="text" name="title"
+                            title="Enter your organizational title using at least seven letters, hyphens, or spaces"
+                            autocomplete="organization-title" pattern="[A-Za-z\s-]{7,}">
+                    </label>
+
+                    <label>
+                        Email Address *
+                        <input type="email" name="email" title="Enter your email address" autocomplete="email"
+                            placeholder="example@email.com" required>
+                    </label>
+
+                    <label>
+                        Mobile Phone *
+                        <input type="tel" name="phone" title="Enter your mobile phone number" autocomplete="tel"
+                            required>
+                    </label>
+
+                    <label>
+                        Business / Organization Name *
+                        <input type="text" name="organization" title="Enter the name of your business or organization"
+                            autocomplete="organization" required>
+                    </label>
+
+                    <label>
+                        Membership Level *
+                        <select name="membership" title="Select a membership level" required>
+                            <option value="" disabled selected>
+                                Select a membership level
+                            </option>
+                            <option value="np">NP Membership</option>
+                            <option value="bronze">Bronze Membership</option>
+                            <option value="silver">Silver Membership</option>
+                            <option value="gold">Gold Membership</option>
+                        </select>
+                    </label>
+
+                    <label>
+                        Business / Organization Description
+                        <textarea name="description" title="Describe your business or organization" rows="5"></textarea>
+                    </label>
+
+                    <input type="hidden" name="timestamp" id="timestamp">
+
+                    <button type="submit" class="submit-button">
+                        Submit Application
+                    </button>
+
+                </form>
+
+            </section>
+
+
+            <!-- MEMBERSHIP LEVELS -->
+
+            <section class="membership-section">
+
+                <h2>Membership Levels</h2>
+
+                <div class="membership-cards">
+
+                    <article class="membership-card level-one">
+                        <h3>NP Membership</h3>
+                        <p>For nonprofit organizations.</p>
+                        <p class="membership-price">No Fee</p>
+
+                        <button type="button" class="learn-more" data-dialog="np-dialog">
+                            Learn More
+                        </button>
+                    </article>
+
+                    <article class="membership-card level-two">
+                        <h3>Bronze Membership</h3>
+                        <p>A great starting level for local businesses.</p>
+
+                        <button type="button" class="learn-more" data-dialog="bronze-dialog">
+                            Learn More
+                        </button>
+                    </article>
+
+                    <article class="membership-card level-three">
+                        <h3>Silver Membership</h3>
+                        <p>More opportunities for business growth.</p>
+
+                        <button type="button" class="learn-more" data-dialog="silver-dialog">
+                            Learn More
+                        </button>
+                    </article>
+
+                    <article class="membership-card level-four">
+                        <h3>Gold Membership</h3>
+                        <p>Our highest level of chamber benefits.</p>
+
+                        <button type="button" class="learn-more" data-dialog="gold-dialog">
+                            Learn More
+                        </button>
+                    </article>
+
+                </div>
+
+            </section>
+
+        </div>
+
+
+        <!-- MODALS -->
+
+        <dialog id="np-dialog">
+            <div class="dialog-content">
+                <h2>NP Membership</h2>
+
+                <p>
+                    Designed for nonprofit organizations serving
+                    Meycauayan City.
+                </p>
+
+                <ul>
+                    <li>No membership fee</li>
+                    <li>Chamber directory listing</li>
+                    <li>Community networking opportunities</li>
+                    <li>Access to selected chamber events</li>
+                </ul>
+
+                <button type="button" class="close-dialog">
+                    Close
+                </button>
+            </div>
+        </dialog>
+
+
+        <dialog id="bronze-dialog">
+            <div class="dialog-content">
+                <h2>Bronze Membership</h2>
+
+                <p>
+                    Designed for businesses beginning their
+                    involvement with the chamber.
+                </p>
+
+                <ul>
+                    <li>Business directory listing</li>
+                    <li>Networking events</li>
+                    <li>Business training opportunities</li>
+                    <li>Member event discounts</li>
+                </ul>
+
+                <button type="button" class="close-dialog">
+                    Close
+                </button>
+            </div>
+        </dialog>
+
+
+        <dialog id="silver-dialog">
+            <div class="dialog-content">
+                <h2>Silver Membership</h2>
+
+                <p>
+                    Provides additional promotional opportunities
+                    for growing businesses.
+                </p>
+
+                <ul>
+                    <li>All Bronze benefits</li>
+                    <li>Enhanced directory listing</li>
+                    <li>Additional event discounts</li>
+                    <li>Business spotlight opportunities</li>
+                    <li>Training and workshops</li>
+                </ul>
+
+                <button type="button" class="close-dialog">
+                    Close
+                </button>
+            </div>
+        </dialog>
+
+
+        <dialog id="gold-dialog">
+            <div class="dialog-content">
+                <h2>Gold Membership</h2>
+
+                <p>
+                    Provides our highest level of visibility
+                    and chamber benefits.
+                </p>
+
+                <ul>
+                    <li>All Silver benefits</li>
+                    <li>Premium directory listing</li>
+                    <li>Priority event discounts</li>
+                    <li>Homepage spotlight opportunities</li>
+                    <li>Advertising opportunities</li>
+                    <li>Priority chamber event participation</li>
+                </ul>
+
+                <button type="button" class="close-dialog">
+                    Close
+                </button>
+            </div>
+        </dialog>
+
+    </main>
+
+
+    <footer>
+
+        <div class="footer-container">
+
+            <div class="contact-info">
+
+                <h2>Meycauayan Chamber of Commerce</h2>
+
+                <p>Meycauayan City</p>
+                <p>Bulacan, Philippines</p>
+
+                <p>
+                    Email:
+                    <a href="mailto:info@meycauyanchamber.org">
+                        info@meycauyanchamber.org
+                    </a>
+                </p>
+
+                <p>
+                    Phone:
+                    <a href="tel:+639123456789">
+                        +63 912 345 6789
+                    </a>
+                </p>
+
+            </div>
+
+            <div class="social-links">
+
+                <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
+                    Facebook
+                </a>
+
+                <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer">
+                    YouTube
+                </a>
+
+                <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">
+                    LinkedIn
+                </a>
+
+            </div>
+
+            <div class="development-info">
+
+                <p>
+                    © <span id="currentYear"></span>
+                    Meycauayan Chamber of Commerce
+                </p>
+
+                <p>Janna Reyes | WDD 231</p>
+
+                <p id="lastModified"></p>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+</body>
+
+</html>
