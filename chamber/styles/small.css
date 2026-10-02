@@ -1,5 +1,3 @@
-
-
 /* ======================================
    GENERAL
    ====================================== */
@@ -1100,7 +1098,7 @@ dialog::backdrop {
     padding: 2rem 1rem;
 }
 
-.discover-main > h1 {
+.discover-main>h1 {
     text-align: center;
     color: #16324f;
     margin-bottom: 1rem;
@@ -1183,8 +1181,10 @@ dialog::backdrop {
     margin: 0;
 }
 
-.discover-card .learn-more {
-    grid-area: button;
+.discover-card p {
+    grid-area: description;
+    line-height: 1.6;
+    margin: 0;
 }
 
 
@@ -1200,9 +1200,10 @@ dialog::backdrop {
 }
 
 
-/* Learn More Button */
+/* Discover Learn More Button */
 
-.learn-more {
+.discover-card .learn-more {
+    grid-area: button;
     background-color: #16324f;
     color: #ffffff;
     border: none;
@@ -1213,8 +1214,8 @@ dialog::backdrop {
     justify-self: start;
 }
 
-.learn-more:hover,
-.learn-more:focus {
+.discover-card .learn-more:hover,
+.discover-card .learn-more:focus {
     background-color: #3c6e91;
 }
 
