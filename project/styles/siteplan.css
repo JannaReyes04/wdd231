@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Roboto:wght@400;500;700&display=swap');
+
+
+/* ======================================
+   GENERAL
+   ====================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+
+    background-color: #f8f9fa;
+    color: #212529;
+
+    font-family: 'Roboto', Arial, sans-serif;
+    line-height: 1.6;
+}
+
+
+/* ======================================
+   HEADER
+   ====================================== */
+
+header {
+    padding: 2rem 1rem;
+
+    background-color: #1d3557;
+    color: white;
+
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+
+    font-family: 'Montserrat', Arial, sans-serif;
+}
+
+header p {
+    margin: 0.5rem 0 0;
+}
+
+
+/* ======================================
+   MAIN
+   ====================================== */
+
+main {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+
+/* ======================================
+   SECTIONS
+   ====================================== */
+
+section {
+    margin: 1.5rem 0;
+    padding: 1.5rem;
+
+    border: 1px solid #ddd;
+    border-radius: 8px;
+
+    background-color: white;
+}
+
+
+/* ======================================
+   HEADINGS
+   ====================================== */
+
+h1,
+h2,
+h3 {
+    font-family: 'Montserrat', Arial, sans-serif;
+}
+
+h2,
+h3 {
+    color: #1d3557;
+}
+
+h2 {
+    padding-bottom: 0.5rem;
+
+    border-bottom: 3px solid #e9c46a;
+}
+
+
+/* ======================================
+   COLOR SCHEME
+   ====================================== */
+
+.color-card {
+    margin: 1rem 0;
+    padding: 1rem;
+
+    border-radius: 6px;
+}
+
+.color-card h3 {
+    margin-top: 0;
+}
+
+
+.primary-color {
+    background-color: #1d3557;
+    color: white;
+}
+
+.primary-color h3 {
+    color: white;
+}
+
+
+.accent-color {
+    background-color: #e9c46a;
+    color: #212529;
+}
+
+
+.background-color {
+    background-color: #f8f9fa;
+    color: #212529;
+
+    border: 1px solid #ccc;
+}
+
+
+.text-color {
+    background-color: #212529;
+    color: white;
+}
+
+.text-color h3 {
+    color: white;
+}
+
+
+/* ======================================
+   TYPOGRAPHY EXAMPLES
+   ====================================== */
+
+.heading-font {
+    font-family: 'Montserrat', Arial, sans-serif;
+}
+
+.body-font {
+    font-family: 'Roboto', Arial, sans-serif;
+}
+
+
+/* ======================================
+   WIREFRAMES
+   ====================================== */
+
+.wireframe {
+    margin: 1rem 0;
+    padding: 1rem;
+
+    border: 2px dashed #1d3557;
+    border-radius: 6px;
+
+    text-align: center;
+}
+
+
+/* ======================================
+   FOOTER
+   ====================================== */
+
+footer {
+    margin-top: 2rem;
+    padding: 1.5rem;
+
+    background-color: #1d3557;
+    color: white;
+
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+}
+
+
+/* ======================================
+   LARGE SCREEN
+   ====================================== */
+
+@media screen and (min-width: 700px) {
+
+    main {
+        padding: 2rem;
+    }
+
+    section {
+        padding: 2rem;
+    }
+
+}
+
+.wireframe img {
+    display: block;
+    width: 100%;
+    max-width: 700px;
+    height: auto;
+    margin: 1rem auto;
+}
