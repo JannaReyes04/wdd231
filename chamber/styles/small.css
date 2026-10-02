@@ -1175,11 +1175,6 @@ dialog::backdrop {
     line-height: 1.5;
 }
 
-.discover-card p {
-    grid-area: description;
-    line-height: 1.6;
-    margin: 0;
-}
 
 .discover-card p {
     grid-area: description;
