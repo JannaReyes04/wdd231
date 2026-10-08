@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>
+   Favorites &amp; Learn | Music &amp; Instrument Explorer
+  </title>
+  <meta content="Save favorite musical instruments and send your instrument learning interests." name="description"/>
+  <meta content="Student Website Project" name="author"/>
+  <meta content="website" property="og:type"/>
+  <meta content="Favorites &amp; Learn | Music &amp; Instrument Explorer" property="og:title"/>
+  <meta content="Save favorite musical instruments and send your instrument learning interests." property="og:description"/>
+  <meta content="images/violin.svg" property="og:image"/>
+  <link href="images/favicon.svg" rel="icon" type="image/svg+xml"/>
+  <link href="styles/base.css" rel="stylesheet"/>
+  <script defer="" src="scripts/favorites.js" type="module">
+  </script>
+ </head>
+ <body>
+  <a class="skip" href="#main">
+   Skip to main content
+  </a>
+  <header class="site-header">
+   <div class="container header-inner">
+    <a class="brand" href="index.html">
+     ♫
+     <span>
+      Music
+     </span>
+     &amp; Instrument Explorer
+    </a>
+    <button aria-controls="primary-nav" aria-expanded="false" aria-label="Toggle navigation" class="menu-toggle" type="button">
+     ☰
+    </button>
+    <nav aria-label="Main navigation" id="primary-nav">
+     <ul>
+      <li>
+       <a data-page="index" href="index.html">
+        Home
+       </a>
+      </li>
+      <li>
+       <a data-page="explore" href="explore.html">
+        Explore
+       </a>
+      </li>
+      <li>
+       <a data-page="favorites" href="favorites.html">
+        Favorites &amp; Learn
+       </a>
+      </li>
+     </ul>
+    </nav>
+   </div>
+  </header>
+  <main id="main">
+   <section class="container">
+    <h1>
+     Favorites &amp; Learn
+    </h1>
+    <p>
+     Your saved instruments are stored in this browser. Use the Explore page to add or remove favorites.
+    </p>
+    <div aria-live="polite" class="cards" id="favorites-grid">
+    </div>
+   </section>
+   <section class="container">
+    <h2>
+     Tell us what you want to learn
+    </h2>
+    <p>
+     This is a demonstration form. It shows your answers on the next page; it does not send them to a server.
+    </p>
+    <form action="form-action.html" class="form-card form-grid" method="get">
+     <label class="field" for="name">
+      Your name
+      <input autocomplete="name" id="name" maxlength="80" minlength="2" name="name" required=""/>
+     </label>
+     <label class="field" for="email">
+      Email
+      <input autocomplete="email" id="email" name="email" required="" type="email"/>
+     </label>
+     <label class="field" for="instrument">
+      Instrument of interest
+      <select id="instrument" name="instrument" required="">
+       <option value="">
+        Choose an instrument
+       </option>
+      </select>
+     </label>
+     <label class="field" for="experience">
+      Experience level
+      <select id="experience" name="experience" required="">
+       <option value="">
+        Select level
+       </option>
+       <option>
+        Beginner
+       </option>
+       <option>
+        Intermediate
+       </option>
+       <option>
+        Advanced
+       </option>
+      </select>
+     </label>
+     <label class="field wide" for="message">
+      Why do you want to learn it?
+      <textarea id="message" maxlength="500" name="message" required="" rows="4"></textarea>
+     </label>
+     <div class="wide">
+      <button class="action" type="submit">
+       View my answers
+      </button>
+     </div>
+    </form>
+   </section>
+  </main>
+  <footer class="site-footer">
+   <div class="container footer-inner">
+    <div>
+     <strong>
+      Music &amp; Instrument Explorer
+     </strong>
+     <div>
+      Discover your next musical adventure.
+     </div>
+     <small>
+      ©
+      <span id="year">
+      </span>
+      Music &amp; Instrument Explorer
+     </small>
+    </div>
+    <div class="footer-links">
+     <a href="attributions.html">
+      Attributions
+     </a>
+     <a data-video-link="" href="VIDEO_URL_HERE">
+      Video demonstration (add URL)
+     </a>
+    </div>
+   </div>
+  </footer>
+ </body>
+</html>
+

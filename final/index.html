@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <title>
+        Home | Music &amp; Instrument Explorer
+    </title>
+    <meta content="Discover musical instruments and learn about their sounds, families, and playing styles."
+        name="description" />
+    <meta content="Student Website Project" name="author" />
+    <meta content="website" property="og:type" />
+    <meta content="Home | Music &amp; Instrument Explorer" property="og:title" />
+    <meta content="Discover musical instruments and learn about their sounds, families, and playing styles."
+        property="og:description" />
+    <meta content="images/violin.svg" property="og:image" />
+    <link href="images/favicon.svg" rel="icon" type="image/svg+xml" />
+    <link href="styles/base.css" rel="stylesheet" />
+    <script defer="" src="scripts/home.js" type="module">
+    </script>
+</head>
+
+<body>
+    <a class="skip" href="#main">
+        Skip to main content
+    </a>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="brand" href="index.html">
+                ♫
+                <span>
+                    Music
+                </span>
+                &amp; Instrument Explorer
+            </a>
+            <button aria-controls="primary-nav" aria-expanded="false" aria-label="Toggle navigation" class="menu-toggle"
+                type="button">
+                ☰
+            </button>
+            <nav aria-label="Main navigation" id="primary-nav">
+                <ul>
+                    <li>
+                        <a data-page="index" href="index.html">
+                            Home
+                        </a>
+                    </li>
+                    <li>
+                        <a data-page="explore" href="explore.html">
+                            Explore
+                        </a>
+                    </li>
+                    <li>
+                        <a data-page="favorites" href="favorites.html">
+                            Favorites &amp; Learn
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main id="main">
+        <section class="hero">
+            <div class="container hero-content">
+
+                <img src="images/music-logo.webp" alt="Music and Instrument Explorer logo featuring musical instruments"
+                    class="hero-logo" width="1536" height="768" fetchpriority="high">
+
+                <h1>Find Your Sound</h1>
+
+                <p>
+                    Discover musical instruments from around the world.
+                    Explore their sounds, learn about their unique
+                    features, and find the instrument that inspires you.
+                </p>
+
+                <a href="explore.html" class="button">
+                    Explore Instruments
+                </a>
+
+            </div>
+        </section>
+        <section class="container">
+            <h2>
+                Discover instrument families
+            </h2>
+            <p class="intro">
+                From the expressive strings to the rhythm of percussion, each instrument family has a unique voice.
+                Browse our collection to find the one that inspires you.
+            </p>
+            <div aria-live="polite" class="cards" id="featured">
+            </div>
+        </section>
+        <section class="container">
+            <div class="notice">
+                <h2>
+                    Make your own learning list
+                </h2>
+                <p>
+                    Save instruments as favorites, then visit Favorites &amp; Learn to share which one you want to try.
+                </p>
+                <a class="button" href="favorites.html">
+                    My favorites
+                </a>
+            </div>
+        </section>
+    </main>
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <div>
+                <strong>
+                    Music &amp; Instrument Explorer
+                </strong>
+                <div>
+                    Discover your next musical adventure.
+                </div>
+                <small>
+                    ©
+                    <span id="year">
+                    </span>
+                    Music &amp; Instrument Explorer
+                </small>
+            </div>
+            <div class="footer-links">
+                <a href="attributions.html">
+                    Attributions
+                </a>
+                <a data-video-link="" href="VIDEO_URL_HERE">
+                    Video demonstration (add URL)
+                </a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

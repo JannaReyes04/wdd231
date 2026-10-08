@@ -1,0 +1,182 @@
+[
+  {
+    "id": "violin",
+    "name": "Violin",
+    "family": "Strings",
+    "difficulty": "Intermediate",
+    "method": "Bowed",
+    "description": "A versatile orchestral instrument known for its expressive tone.",
+    "image": "images/violin.webp"
+  },
+  {
+    "id": "viola",
+    "name": "Viola",
+    "family": "Strings",
+    "difficulty": "Intermediate",
+    "method": "Bowed",
+    "description": "A warm-toned bowed instrument slightly larger than a violin.",
+    "image": "images/viola.webp"
+  },
+  {
+    "id": "cello",
+    "name": "Cello",
+    "family": "Strings",
+    "difficulty": "Intermediate",
+    "method": "Bowed",
+    "description": "A lower-pitched bowed instrument with a rich, resonant sound.",
+    "image": "images/cello.webp"
+  },
+  {
+    "id": "double-bass",
+    "name": "Double Bass",
+    "family": "Strings",
+    "difficulty": "Advanced",
+    "method": "Bowed",
+    "description": "The largest and lowest-pitched standard orchestral string instrument.",
+    "image": "images/double-bass.webp"
+  },
+  {
+    "id": "acoustic-guitar",
+    "name": "Acoustic Guitar",
+    "family": "Strings",
+    "difficulty": "Beginner",
+    "method": "Plucked",
+    "description": "A portable string instrument played by strumming or fingerpicking.",
+    "image": "images/acoustic-guitar.webp"
+  },
+  {
+    "id": "electric-guitar",
+    "name": "Electric Guitar",
+    "family": "Strings",
+    "difficulty": "Beginner",
+    "method": "Amplified",
+    "description": "A guitar that uses pickups and an amplifier to shape its sound.",
+    "image": "images/electric-guitar.webp"
+  },
+  {
+    "id": "ukulele",
+    "name": "Ukulele",
+    "family": "Strings",
+    "difficulty": "Beginner",
+    "method": "Plucked",
+    "description": "A small four-string instrument with a bright, cheerful tone.",
+    "image": "images/ukulele.webp"
+  },
+  {
+    "id": "piano",
+    "name": "Piano",
+    "family": "Keyboards",
+    "difficulty": "Beginner",
+    "method": "Keyboard",
+    "description": "A keyboard instrument with hammers that strike strings.",
+    "image": "images/piano.webp"
+  },
+  {
+    "id": "digital-keyboard",
+    "name": "Digital Keyboard",
+    "family": "Keyboards",
+    "difficulty": "Beginner",
+    "method": "Electronic",
+    "description": "An electronic keyboard offering a range of instrument sounds.",
+    "image": "images/digital-keyboard.webp"
+  },
+  {
+    "id": "organ",
+    "name": "Organ",
+    "family": "Keyboards",
+    "difficulty": "Intermediate",
+    "method": "Keyboard",
+    "description": "A keyboard instrument that produces sustained tones.",
+    "image": "images/organ.webp"
+  },
+  {
+    "id": "flute",
+    "name": "Flute",
+    "family": "Woodwinds",
+    "difficulty": "Beginner",
+    "method": "Air stream",
+    "description": "A high-pitched wind instrument played by blowing across an opening.",
+    "image": "images/flute.webp"
+  },
+  {
+    "id": "clarinet",
+    "name": "Clarinet",
+    "family": "Woodwinds",
+    "difficulty": "Intermediate",
+    "method": "Single reed",
+    "description": "A woodwind with a flexible range and mellow lower register.",
+    "image": "images/clarinet.webp"
+  },
+  {
+    "id": "saxophone",
+    "name": "Saxophone",
+    "family": "Woodwinds",
+    "difficulty": "Intermediate",
+    "method": "Single reed",
+    "description": "A brass-bodied woodwind frequently heard in jazz and pop.",
+    "image": "images/saxophone.webp"
+  },
+  {
+    "id": "oboe",
+    "name": "Oboe",
+    "family": "Woodwinds",
+    "difficulty": "Advanced",
+    "method": "Double reed",
+    "description": "A woodwind known for its focused, penetrating sound.",
+    "image": "images/oboe.webp"
+  },
+  {
+    "id": "trumpet",
+    "name": "Trumpet",
+    "family": "Brass",
+    "difficulty": "Intermediate",
+    "method": "Lip vibration",
+    "description": "A bright brass instrument commonly used in bands and orchestras.",
+    "image": "images/trumpet.webp"
+  },
+  {
+    "id": "trombone",
+    "name": "Trombone",
+    "family": "Brass",
+    "difficulty": "Intermediate",
+    "method": "Slide",
+    "description": "A brass instrument that changes pitch primarily with a slide.",
+    "image": "images/trombone.webp"
+  },
+  {
+    "id": "french-horn",
+    "name": "French Horn",
+    "family": "Brass",
+    "difficulty": "Advanced",
+    "method": "Valves",
+    "description": "A coiled brass instrument known for its rounded orchestral tone.",
+    "image": "images/french-horn.webp"
+  },
+  {
+    "id": "drum-kit",
+    "name": "Drum Kit",
+    "family": "Percussion",
+    "difficulty": "Beginner",
+    "method": "Struck",
+    "description": "A set of drums and cymbals used to keep rhythm.",
+    "image": "images/drum-kit.webp"
+  },
+  {
+    "id": "xylophone",
+    "name": "Xylophone",
+    "family": "Percussion",
+    "difficulty": "Beginner",
+    "method": "Mallets",
+    "description": "A tuned percussion instrument with wooden bars.",
+    "image": "images/xylophone.webp"
+  },
+  {
+    "id": "tambourine",
+    "name": "Tambourine",
+    "family": "Percussion",
+    "difficulty": "Beginner",
+    "method": "Shaken/struck",
+    "description": "A handheld percussion instrument with jingles.",
+    "image": "images/tambourine.webp"
+  }
+]
