@@ -1,0 +1,96 @@
+/* Responsive layouts and reduced-motion preferences */
+
+@media(min-width:650px) {
+    .cards {
+        grid-template-columns: repeat(2, minmax(0, 1fr))
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr 1fr
+    }
+
+    .wide {
+        grid-column: 1/-1
+    }
+}
+
+@media(min-width:900px) {
+    .cards {
+        grid-template-columns: repeat(3, minmax(0, 1fr))
+    }
+
+    .menu-toggle {
+        display: none
+    }
+
+    nav {
+        display: block
+    }
+
+    nav ul {
+        display: flex;
+        padding: 0
+    }
+}
+
+@media(prefers-reduced-motion:no-preference) {
+    html {
+        scroll-behavior: smooth
+    }
+
+    .card {
+        transition: transform/**/.2s
+    }
+
+    .card:hover {
+        transform: translateY(-3px)
+    }
+}
+
+@media(max-width: 899px) {
+    .header-inner {
+        flex-wrap: wrap;
+        padding-block: .75rem;
+    }
+
+    .brand {
+        max-width: calc(100% - 5rem);
+    }
+
+    #primary-nav {
+        flex-basis: 100%;
+        width: 100%;
+    }
+
+    #primary-nav ul {
+        padding: .5rem 0;
+    }
+}
+
+@media(min-width: 900px) {
+    #primary-nav ul {
+        align-items: center;
+        gap: .25rem;
+    }
+}
+
+@media(max-width: 480px) {
+    .hero {
+        padding: 3rem 0;
+    }
+
+    .footer-inner,
+    .footer-links {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 600px) {
+    .hero {
+        padding: 1.5rem 0.75rem 2rem;
+    }
+
+    .hero-logo {
+        width: 100%;
+    }
+}

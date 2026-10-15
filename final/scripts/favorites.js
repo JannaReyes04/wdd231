@@ -31,6 +31,8 @@ try {
         )));
     }
     render();
+    window.addEventListener("pageshow", render);
+    window.addEventListener("storage", render);
 }
 catch {
     grid.textContent= 'Unable to load your instrument list.';
