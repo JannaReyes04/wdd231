@@ -13,11 +13,12 @@
 }
 
 body {
-    margin: 0
+    margin: 0;
+    font-family: "Roboto", Arial, sans-serif;
 }
 
 a {
-    color: #005f71
+    color: #005f71;
 }
 
 a:focus-visible,
@@ -26,7 +27,7 @@ input:focus-visible,
 select:focus-visible,
 textarea:focus-visible {
     outline: 3px solid #b26708;
-    outline-offset: 3px
+    outline-offset: 3px;
 }
 
 .skip {
@@ -140,9 +141,9 @@ button.action {
     font-weight: 650
 }
 
-.hero.button {
+.hero .button {
     background: var(--gold);
-    color: #1d2830
+    color: #1d2830;
 }
 
 .button.secondary,
@@ -422,7 +423,7 @@ section.container>.intro {
     flex: 1;
 }
 
-.card-content.actions {
+.card-content .actions {
     margin-top: auto;
     padding-top: 1rem;
 }
